@@ -1,24 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
+import { useEffect } from 'react'
 import './App.css';
+import { useAppDispatch, useAppSelector } from './hooks/redux';
+import { fetchUsers } from './store/reducers/ActionCreators';
+import { userReducer } from './store/reducers/UserReducer';
+import { RootState } from './store/store';
+import PostContainer from './components/PostContainer';
+import Title from './components/MainTitle/Title';
 
 function App() {
+  // const dispatch = useAppDispatch()
+  // const {users, isLoading, error} = useAppSelector(state => state.userReducer)
+
+  // useEffect(() => {
+  //   dispatch(fetchUsers())
+  // }, [])
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Title/>
+      {/* {isLoading && <h1>Загрузка....</h1>}
+      {error && <h1>{error}</h1>}
+      {JSON.stringify(users, null, 2)} */}
+
+      <PostContainer/>
+
     </div>
   );
 }

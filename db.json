@@ -1,0 +1,23 @@
+{
+  "posts": [
+    {
+      "title": "Gjnjcv",
+      "body": "Gjnjcv",
+      "id": 1
+    },
+    {
+      "title": "vcv",
+      "body": "vcv",
+      "id": 2
+    },
+    {
+      "title": "vcvcv",
+      "body": "vcvcv",
+      "id": 3
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
